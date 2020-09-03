@@ -6,6 +6,16 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+
+    private $route = array('show' => 'home');
+
+    private $indexvariables = array(
+        'title' => 'DASHBOARD',
+        'url' => 'home',
+        'urltomain' => '/'
+    );
+    private $multipostvar = "home";
+
     /**
      * Create a new controller instance.
      *
@@ -23,6 +33,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('home')
+            ->with('route', $this->route)
+            ->with('indexvar', $this->indexvariables);
     }
 }
