@@ -11,7 +11,6 @@ const mix = require('laravel-mix');
  |
  */
 
-
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .disableNotifications()
@@ -23,7 +22,7 @@ mix.js('resources/js/app.js', 'public/js')
             'resources/**/*',
             'routes/**/*'
         ]
-    });
+    })
 
 if (mix.inProduction()) {
     mix.version();
