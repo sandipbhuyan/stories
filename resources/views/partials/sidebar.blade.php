@@ -5,23 +5,13 @@
                 ">
             <i class="fa fa-home"></i> Dashboard
         </a>
-{{--        <a href="{{route('experience.index')}}" class="list-group-item--}}
-{{--              {{Route::is('experience.index') ||--}}
-{{--                Route::is('experience.show')||--}}
-{{--                Route::is('experience.edit') ||--}}
-{{--                Route::is('experience.create')? "active": ""}}">--}}
-{{--            <i class="fa fa-bank"></i> Experience--}}
-{{--        </a>--}}
+        <a href="{{route('stories.index')}}" class="list-group-item
+              {{Route::is('stories.index') ||
+                Route::is('stories.show')||
+                Route::is('stories.edit') ||
+                Route::is('stories.create')? "active": ""}}">
+            <i class="fa fa-bank"></i> Stories
+        </a>
 
     </div>
-
-    <ul class="list-group">
-        <li class="list-group-item active alert-danger">DETAILS</li>
-        <li class="list-group-item">Last Login : </li>
-    </ul>
-    <ul class="list-group">
-        <li class="list-group-item active">PROFILE INFORMATION</li>
-        <li class="list-group-item">Created At :</li>
-        <li class="list-group-item">Updated At : </li>
-    </ul>
 </div>

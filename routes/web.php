@@ -20,3 +20,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::resource('stories', 'StoriesController');
+Route::get('stories/publish/{id}', 'StoriesController@publish')->name('stories.publish');
+Route::get('stories/unpublish/{id}', 'StoriesController@unpublish')->name('stories.unpublish');
