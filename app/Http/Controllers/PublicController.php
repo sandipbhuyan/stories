@@ -36,7 +36,6 @@ class PublicController extends Controller
 
             }
         }
-        DB::table('stories')->where('id', $id)->increment('currentViews');
         $story = Stories::find($id);
         if ($story->is_published == 0) {
             return redirect("/");
@@ -51,12 +50,18 @@ class PublicController extends Controller
     public function decreaseCurrentView($id)
     {
         $res = DB::table('stories')->where('id', $id)->decrement('currentViews');
-        return $res;
+        return response($res);
+    }
+
+    public function increaseView($id)
+    {
+        $res = DB::table('stories')->where('id', $id)->increment('currentViews');
+        return response($res);
     }
 
     public function getCurrentView($id)
     {
         $details = Stories::find($id);
-        return $details;
+        return $details->currentViews;
     }
 }

@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/currentViews/{id}','PublicController@getCurrentView');
+
+Route::get('/decreaseCurrentViews/{id}', 'PublicController@decreaseCurrentView');
+
+Route::get('/increaseCurrentViews/{id}', 'PublicController@increaseView');
