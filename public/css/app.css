@@ -13227,3 +13227,15 @@ a.text-dark:focus {
   }
 }
 
+.header-image {
+  width: 100%;
+  height: auto;
+}
+
+.card-modify-image {
+  height: 256px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+

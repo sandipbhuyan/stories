@@ -167,7 +167,7 @@ class StoriesController extends Controller
      */
     public function index()
     {
-        $posts = $this->modelname::orderBy('id', 'desc')->paginate($this->indexpagination);
+        $posts = $this->modelname::orderBy('id', 'desc')->where('uid', Auth::user()->id)->paginate($this->indexpagination);
         $fields = $this->indexfields;
 
         return view($this->view['index'])->with($this->multipostvar, $posts)

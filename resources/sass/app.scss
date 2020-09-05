@@ -7,3 +7,15 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+.header-image {
+    width: 100%;
+    height: auto;
+}
+
+.card-modify-image {
+    height: 256px;
+    width: 100%;
+    object-fit: cover;
+}
+

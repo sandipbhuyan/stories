@@ -13,14 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PublicController@index');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/story/{id}', 'PublicController@showStory');
 
 Route::resource('stories', 'StoriesController');
 Route::get('stories/publish/{id}', 'StoriesController@publish')->name('stories.publish');
