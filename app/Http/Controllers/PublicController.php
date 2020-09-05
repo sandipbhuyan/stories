@@ -14,7 +14,7 @@ class PublicController extends Controller
 {
     public function index()
     {
-        $posts = Stories::orderBy('id', 'desc')->where('is_published', 1)->paginate(20);
+        $posts = Stories::orderBy('id', 'desc')->where('is_published', 1)->paginate(9);
         return view('welcome')->with('posts', $posts);
     }
 

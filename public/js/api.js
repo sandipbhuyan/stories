@@ -2416,6 +2416,7 @@ function setCurrentView() {
   });
 }
 
+setCurrentView();
 var interval = setInterval(setCurrentView, 5000);
 
 window.onbeforeunload = function () {

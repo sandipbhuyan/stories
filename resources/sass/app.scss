@@ -79,3 +79,9 @@ $text-color: #777777;
     }
 
 }
+
+.center-align {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}

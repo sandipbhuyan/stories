@@ -21,5 +21,8 @@
             @endforeach
 
         </div>
+        <div class="center-align">
+            {{ $posts->links() }}
+        </div>
     </div>
 @endsection

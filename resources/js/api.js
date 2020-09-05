@@ -7,6 +7,8 @@ function setCurrentView() {
         }).catch(err => console.log(err))
 }
 
+setCurrentView();
+
 const interval = setInterval(setCurrentView, 5000);
 
 

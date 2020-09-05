@@ -13297,3 +13297,9 @@ a.text-dark:focus {
   }
 }
 
+.center-align {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+

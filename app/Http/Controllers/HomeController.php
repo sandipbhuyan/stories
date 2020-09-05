@@ -33,8 +33,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home')
-            ->with('route', $this->route)
-            ->with('indexvar', $this->indexvariables);
+        return redirect('/stories');
     }
 }
