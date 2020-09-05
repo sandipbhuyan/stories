@@ -26,7 +26,7 @@
                         </p>
                         <input type="hidden" id="storyId" value="{{$story->id}}">
                         <p class="card-text">
-                            <i class="fa fa-eye-slash" style="color: #1d68a7"></i>
+                            <i class="fa fa-eye" style="color: #1d68a7"></i>
                             <b>Current Views : </b> <span id="currentViews">{{$story->currentViews}}</span>
                         </p>
                         <p class="card-text">

@@ -37,6 +37,9 @@ class PublicController extends Controller
 
             }
         }
+        else {
+            DB::table('stories')->where('id', $id)->increment('views');
+        }
         $story = Stories::find($id);
         if ($story->is_published == 0) {
             return redirect("/");

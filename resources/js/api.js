@@ -9,7 +9,7 @@ function setCurrentView() {
 
 setCurrentView();
 
-const interval = setInterval(setCurrentView, 5000);
+const interval = setInterval(setCurrentView, 2000);
 
 
 window.onbeforeunload = function(){
