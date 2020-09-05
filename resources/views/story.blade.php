@@ -31,7 +31,11 @@
                         </p>
                         <p class="card-text">
                             <i class="fa fa-podcast" style="color: #1d68a7"></i>
-                            <b>Posted On : </b> <span>{{ date('M j, Y H:iA', strtotime($story->created_at) )}}</span>
+                            <b>Posted On : </b> <span>{{ date('M j, Y', strtotime($story->created_at) )}}</span>
+                        </p>
+                        <p class="card-text">
+                            <i class="fa fa-book" style="color: #1d68a7"></i>
+                            <b>Written By : </b> <span>{{$user->name}}</span>
                         </p>
                     </div>
                 </div>

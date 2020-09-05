@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\Views;
 use Illuminate\Http\Request;
 use App\Stories;
@@ -41,9 +42,10 @@ class PublicController extends Controller
             return redirect("/");
         }
         $story->content = Parsedown::instance()->text(Storage::disk('general_uploads')->get($story->content));
-
+        $user = User::find($story->uid);
         return view('story')
             ->with('story', $story)
+            ->with('user', $user)
             ->with('userDetails', $userView);
     }
 
